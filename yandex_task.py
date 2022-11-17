@@ -1,6 +1,6 @@
 import requests
 import os
-from setting import TOKEN
+#from setting import TOKEN
 
 class YaUploader:
     base_host = 'https://cloud-api.yandex.net/'
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     # Получить путь к загружаемому файлу и токен от пользователя
     token = ''
     uploader = YaUploader(token)
-    os.chdir("D:\\Python\docs")
+    os.chdir('D:\\Python\docs')
     file_list = os.listdir('D:\\Python\docs')
     for path_to_file in file_list:
         result = uploader.upload(path_to_file,'/'+path_to_file)
